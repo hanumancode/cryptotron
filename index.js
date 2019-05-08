@@ -9,6 +9,13 @@ const callback = (error, response, data) => {
 
 //publicClient.getProducts(callback);
 
-publicClient.getCurrencies(callback);
+//publicClient.getCurrencies(callback);
 
+publicClient.getProductHistoricRates('BTC-USD', callback);
+
+publicClient.getProductHistoricRates(
+    'BTC-USD',
+    {granularity: 3600 },
+    callback
+);
 
